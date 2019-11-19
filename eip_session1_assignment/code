@@ -1,0 +1,53 @@
+from keras.layers import Activation
+model = Sequential()
+
+ 
+model.add(Convolution2D(64, 3, 3, activation='relu', input_shape=(28,28,1)))
+model.add(Convolution2D(64, 3, 3, activation='relu'))
+model.add(Convolution2D(32, 3, 3, activation='relu'))
+model.add(MaxPooling2D(pool_size=(2,2)))
+model.add(Convolution2D(32, 3, 3, activation='relu'))
+model.add(Convolution2D(32, 3, 3, activation='relu'))
+model.add(Convolution2D(32, 3 ,3, activation='relu'))
+model.add(Convolution2D(32, 3 ,3, activation='relu'))
+model.add(Convolution2D(10, 3 ,3, activation='relu'))
+model.add(Flatten())
+model.add(Activation('softmax'))
+
+
+
+Model: "sequential_14"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_104 (Conv2D)          (None, 26, 26, 64)        640       
+_________________________________________________________________
+conv2d_105 (Conv2D)          (None, 24, 24, 64)        36928     
+_________________________________________________________________
+conv2d_106 (Conv2D)          (None, 22, 22, 32)        18464     
+_________________________________________________________________
+max_pooling2d_16 (MaxPooling (None, 11, 11, 32)        0         
+_________________________________________________________________
+conv2d_107 (Conv2D)          (None, 9, 9, 32)          9248      
+_________________________________________________________________
+conv2d_108 (Conv2D)          (None, 7, 7, 32)          9248      
+_________________________________________________________________
+conv2d_109 (Conv2D)          (None, 5, 5, 32)          9248      
+_________________________________________________________________
+conv2d_110 (Conv2D)          (None, 3, 3, 32)          9248      
+_________________________________________________________________
+conv2d_111 (Conv2D)          (None, 1, 1, 10)          2890      
+_________________________________________________________________
+flatten_14 (Flatten)         (None, 10)                0         
+_________________________________________________________________
+activation_14 (Activation)   (None, 10)                0         
+=================================================================
+Total params: 95,914
+Trainable params: 95,914
+Non-trainable params: 0
+
+
+
+
+print(score)
+[0.03221556369083828, 0.9916]

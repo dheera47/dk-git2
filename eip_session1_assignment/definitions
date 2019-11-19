@@ -1,0 +1,22 @@
+1. Convolution : It’s a mathematical technique used for modifying the object.
+
+
+2. Filter’s or Kernels : A filter or Kernel is used to extract a features/textures/edges from object in a layered fashion (used for transforming from one layer to the other)
+
+
+3. Epochs : The training of entire data set forward and backward through the neural network
+
+
+4. 1 x 1 convolution : It’s a linear convolution, It is used to identify the patterns by adding the few pixels 
+
+
+5. 3 x 3 convolution : It’s the universally accepted kernel from observations (from lot of research papers).
+
+
+6. Feature Maps : The output obtained after passing the input through filter/kernal is called as feature map
+
+
+7. Activation function : It's used for boundary cutoff for calcution  (eg : the reLu activation function, which is max(0, input)).
+
+
+8. Receptive field : The residue layer obtained after passing through all the layers filter/kernels and which has the sensitive features to predict the overall object.
